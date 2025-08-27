@@ -39,11 +39,7 @@ El verdadero valor está en las personas detrás del código:
 - 👨‍💻 Cristian Gimenez  
 - Bestabé Gutierrez  
 - Santiago Martos  
-- Mauro Ulloa  
-- Sofia Torres  
-- Victoria Galdona  
-- Quiles Horacio  
-- Juan Vera
+- Victoria Galdona 
 
 ---
 
