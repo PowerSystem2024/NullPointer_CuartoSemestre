@@ -1,0 +1,34 @@
+/*products styles*/
+.card-products-container {
+    margin: 5vh auto; /*margen superior e inferior de 5vh y centrado horizontal*/
+}
+
+.card-products {
+    text-align: center; /*los elementos dentro del contenedor se centran*/
+    display: flex;  /*los elementos dentro del contenedor se acomodan en un flexbox*/
+    flex-direction: row; /*los elementos se acomodan en una fila*/
+    justify-content: space-around;/*espacio entre los elementos*/
+    flex-wrap: wrap; /*permite que los elementos se acomoden en varias filas si no caben en una sola fila*/
+}
+
+.card-products img {
+    margin-top: 40px; /*margen superior de las imagenes*/
+    width: 250px; /*tamaño de las imagenes*/
+    height: 250px; /*tamaño de las imagenes*/
+}
+
+.card-products button {
+    border: none; /*sin borde*/
+    outline: 0; /*sin contorno*/
+    padding: 10px; /*relleno del boton*/
+    color: white;
+    background-color: #1BCB7F; /*color de fondo del boton*/
+    text-align: center; /*texto centrado*/
+    cursor: pointer /*cambia el cursor al pasar sobre el boton*/;
+    width: 100%; /*ancho del boton*/
+    font-size: 15px; /*tamaño de la fuente del boton*/
+}
+
+.card-products button:hover {
+    opacity: 0.7; /*cambia la opacidad del boton al pasar sobre el*/
+}
