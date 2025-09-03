@@ -3,7 +3,7 @@ const shopContent = document.getElementById("shopContent"); //donde se van a mos
 productos.forEach((products)=> { //recorre el arreglo de productos
     const content = document.createElement("div"); //crea un div
     content.innerHTML = `
-        <img src="${products.img}/>
+        <img src="${products.img}"/>
         <h3>${products.productName}</h3>
         <p>${products.price} $</p>
     `; //contenido dinamico
