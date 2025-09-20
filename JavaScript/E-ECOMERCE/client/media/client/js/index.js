@@ -24,6 +24,7 @@ productos.forEach((products)=> { //recorre el arreglo de productos
             cart.map((prod) => { //recorre el carrito y detecta
                 if (prod.id === products.id) {//si el id del producto es igual al id del producto que se esta comprando o agregando 
                 prod.quanty++; //aumenta la cantidad en uno mas
+                displayCartCounter(); //ejecuta la funcion displayCartCounter para que se actualice el contador
                 }
             });
         }else {
@@ -34,6 +35,7 @@ productos.forEach((products)=> { //recorre el arreglo de productos
             quanty: products.quanty, //cantidad del producto
             img: products.img, //imagen del producto
             });
+            displayCartCounter(); //ejecuta la funcion displayCartCounter para que se actualice el contador del carrito
         }
     });
 

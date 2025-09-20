@@ -51,6 +51,21 @@
     opacity: 0.9; /*cambia la opacidad del boton al pasar sobre el*/
 }
 
+.cart-counter {
+    display: none; /*el contador no se muestra por defecto*/
+    position: fixed; /*el contador se mantiene en la misma posicion al hacer scroll*/
+    top: 89vh; /*margen superior del contador*/
+    right: 27px; /*margen derecho del contador*/
+    color: #fff; /*color del texto del contador*/
+    text-align: center; /*texto centrado*/
+    background-color: #ed3434; /*color de fondo del contador*/
+    padding: 4px; /*relleno del contador*/;
+    border-radius: 50%; /*borde redondeado del contador*/
+    height: 17px; /*altura del contador*/
+    width: 17px; /*ancho del contador*/
+    font-size: 15px; /*tamaño de la fuente del contador*/
+}
+
 /*modal styles*/
 .modal-overlay {
     display: none; /*el modal no se muestra por defecto*/
