@@ -9,28 +9,28 @@ const productos = [
     {
         id: 2,
         productName: "Leche",
-        price: 910,
+        price: 700,
         quanty: 1,
         img: "./media/leche.png",
     },
     {
         id: 3,
         productName: "Pollo",
-        price: 1022,
+        price: 1500,
         quanty: 1,
         img: "./media/pollo.png",
     },
     {
         id: 4,
         productName: "Gaseosa Sprite",
-        price: 750,
+        price: 500,
         quanty: 1,
         img: "./media/lata_gaseosa.png",
     },
     {
         id: 5,
         productName: "Mayonesa",
-        price: 1000,
+        price: 150,
         quanty: 1,
         img: "./media/mayonesa.png",
     }

@@ -94,3 +94,90 @@
     margin-bottom: 20px; /*margen inferior del titulo del modal*/
     text-align: center; /*texto centrado*/
 }
+
+/*modal-body*/
+.modal-body {
+    margin-bottom:20px; /*margen inferior del cuerpo del modal*/
+    text-align: center; /*texto centrado*/
+}
+
+.products {
+    display: flex; /*los elementos dentro del contenedor se acomodan en un flexbox*/
+    justify-content: space-around; /*espacio entre los elementos*/
+    align-items: center; /*los elementos se alinean al centro*/
+    margin-bottom: 20px; /*margen inferior de los productos*/
+}
+
+.products-img {
+    height: 80px; /*altura de las imagenes*/
+    margin-right:20px; /*margen derecho de las imagenes*/
+    width: 80px;
+}
+
+.products-info {
+    flex: 1; /*el contenedor de la informacion del producto ocupa todo el espacio disponible*/
+    text-align: left; /*texto alineado a la izquierda*/
+}
+
+.products-info h4 {
+    margin-top:35px; /*margen superior del titulo del producto*/;
+}
+
+.quantity {
+    display: flex; /*los elementos dentro del contenedor se acomodan en un flexbox*/
+    align-items: center; /*los elementos se alinean al centro*/
+    justify-content: center; /*los elementos se alinean al centro*/
+    margin-top:  10px; /*margen superior del contenedor de la cantidad*/
+    margin-right: 4em; /*margen derecho del contenedor de la cantidad*/
+}
+
+.quantity-btn-decrese,
+.quantity-btn-increse {
+    color: #333333;
+    cursor: pointer; /*cambia el cursor al pasar sobre el boton*/
+    font-size: 16px; /*tamaño de la fuente del boton*/
+    width: 28px;
+    font-weight: bold; /*peso de la fuente del boton*/
+}
+
+.quantity-input {
+    color: #333333;
+    font-size: 16px;
+    padding: 10px 10px; /*relleno del input*/
+    text-align: center; /*texto centrado*/
+    width: 50px; /*ancho del input*/
+    font-weight: bold; /*peso de la fuente del input*/
+}
+
+@media only screen and (max-width: 500px) {
+    .products-img {
+        display: none; /*oculta las imagenes en pantallas menores a 500px*/
+    }
+    .modal-body {
+        margin-left: 5px; /*margen izquierdo del cuerpo del modal*/
+        margin-right: 5px; /*margen derecho del cuerpo del modal*/
+    }
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold; /*peso de la fuente del precio*/
+    margin-top: 20px;   /*margen superior del precio*/
+}
+
+.delete-products {
+    margin-top: 20px;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+.total-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
