@@ -1,0 +1,121 @@
+@startuml DiagramaClasesClinica
+
+' --------------------------------------------------------
+' 1. ENUMS (Para estados y tipos)
+' --------------------------------------------------------
+enum EstadoTurno {
+    PENDIENTE
+    CONFIRMADO
+    ATENDIDO
+    CANCELADO
+}
+
+enum TipoEstudio {
+    LABORATORIO
+    IMAGENOLOGIA
+}
+
+' --------------------------------------------------------
+' 2. CLASES
+' --------------------------------------------------------
+class Paciente {
+    - dni : String {PK}
+    - nombre : String
+    - seguroMedico : String
+    --
+    + solicitarTurno()
+    + consultarHistorial()
+}
+
+class Medico {
+    - idMedico : int {PK}
+    - nombre : String
+    - especialidad : String
+    --
+    + registrarDiagnostico(Consulta)
+    + solicitarEstudio(Consulta)
+}
+
+class Turno {
+    - idTurno : int {PK}
+    - fechaHora : LocalDateTime
+    - estado : EstadoTurno
+    --
+    + confirmarAsistencia()
+}
+
+class HistoriaClinica {
+    - fechaApertura : LocalDate
+    --
+    + agregarConsulta(Consulta)
+    + agregarEstudio(Estudio)
+}
+
+class Consulta {
+    - fecha : LocalDateTime
+    - diagnostico : String
+    - receta : String
+}
+
+class Estudio {
+    - ordenId : String {PK}
+    - tipo : TipoEstudio
+    - descripcion : String
+    - resultado : String {Null}
+    --
+    + cargarResultado(String tecnico)
+}
+
+class Factura {
+    - idFactura : int {PK}
+    - monto : double
+    - pagada : boolean
+    --
+    + registrarPago()
+}
+
+' --------------------------------------------------------
+' 3. RELACIONES (Multiplicidad y Navegación)
+' --------------------------------------------------------
+
+' Relación 1:1 (Composición/Agregación)
+Paciente "1" *-- "1" HistoriaClinica : tiene
+
+' Relación 1:N (Paciente/Medico tiene muchos Turnos)
+Paciente "1" -- "*" Turno
+Medico "1" -- "*" Turno : asigna
+
+' Relación del Flujo de Atención (Turno genera Consulta)
+Turno "1" -- "0..1" Consulta : esAtendidoEn
+
+' Relaciones del Historial
+HistoriaClinica "1" *-- "*" Consulta : incluye
+HistoriaClinica "1" *-- "*" Estudio : incluye
+
+' Relaciones de Diagnóstico y Estudios
+Medico -- Consulta : registra
+Consulta "1" -- "*" Estudio : solicita
+
+' Relaciones Administrativas
+Paciente "1" -- "*" Factura : debe
+Turno "1" -- "1" Factura : genera
+Factura -- Medico : facturadoPor
+Factura -- Consulta : asociadaA
+
+' --------------------------------------------------------
+' 4. ACTORES (Opcional, para indicar responsabilidades)
+' --------------------------------------------------------
+actor Recepcionista
+actor Tecnico
+actor Administrativo
+
+' Recepcionista interactúa con Turno
+Recepcionista ..> Turno : confirma asistencia
+
+' Tecnico interactúa con Estudio
+Tecnico ..> Estudio : carga resultados
+
+' Administrativo interactúa con Factura
+Administrativo ..> Factura : gestiona pagos
+
+@endumldd
