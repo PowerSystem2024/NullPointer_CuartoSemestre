@@ -32,3 +32,167 @@
 .card-products button:hover {
     opacity: 0.7; /*cambia la opacidad del boton al pasar sobre el*/
 }
+
+/*cart-button*/
+.cart-btn {
+    position: fixed; /*el boton se mantiene en la misma posicion al hacer scroll*/
+    top: 90vh; /*margen superior del boton*/
+    right: 40px; /*margen derecho del boton*/
+    background-color: rgb(25,25,25); /*color de fondo del boton*/
+    padding: 10px; /*relleno del boton*/
+    border-radius: 50px; /*borde redondeado del boton*/
+    height: 24px; /*altura del boton*/
+    width: 24px; /*ancho del boton*/
+    transition: transform 0.2s ease-in-out; /*transicion al pasar sobre el boton*/
+}
+
+.cart-btn:hover {
+    cursor: pointer; /*cambia el cursor al pasar sobre el boton*/
+    opacity: 0.9; /*cambia la opacidad del boton al pasar sobre el*/
+}
+
+.cart-counter {
+    display: none; /*el contador no se muestra por defecto*/
+    position: fixed; /*el contador se mantiene en la misma posicion al hacer scroll*/
+    top: 89vh; /*margen superior del contador*/
+    right: 27px; /*margen derecho del contador*/
+    color: #fff; /*color del texto del contador*/
+    text-align: center; /*texto centrado*/
+    background-color: #ed3434; /*color de fondo del contador*/
+    padding: 4px; /*relleno del contador*/;
+    border-radius: 50%; /*borde redondeado del contador*/
+    height: 17px; /*altura del contador*/
+    width: 17px; /*ancho del contador*/
+    font-size: 15px; /*tamaño de la fuente del contador*/
+}
+
+/*modal styles*/
+.modal-overlay {
+    display: none; /*el modal no se muestra por defecto*/
+    background-color: rgba(0,0,0,0.5); /*color de fondo del modal*/
+    position: fixed; /*el modal se mantiene en la misma posicion al hacer scroll*/
+    top: 0; /*margen superior del modal*/
+    left: 0; /*margen izquierdo del modal*/
+    right: 0; /*margen derecho del modal*/
+    bottom: 0; /*margen inferior del modal*/
+    z-index: 1; /*el modal se muestra por encima de otros elementos*/
+}
+
+.modal-container {
+    display: none;
+    background-color: #ffffff; /*color de fondo del contenedor del modal*/
+    box-shadow: 0px 3px 6px #00000029; /*sombra del contenedor del modal*/
+    padding: 40px; /*relleno del contenedor del modal*/
+    position: absolute; /*el contenedor del modal se posiciona de forma absoluta*/
+    top: 50%; /*margen superior del contenedor del modal*/
+    left: 50%; /*margen izquierdo del contenedor del modal*/
+    transform: translate(-50%, -50%); /*el contenedor del modal se centra*/
+    max-width: 500px; /*ancho maximo del contenedor del modal*/
+    width: 100%; /*ancho del contenedor del modal*/
+    z-index: 1; /*el contenedor del modal se muestra por encima de otros elementos*/
+    max-height: 80vh; /*altura maxima del contenedor del modal*/
+    overflow-y: auto; /*permite el scroll si el contenido del contenedor del modal es mayor que la altura maxima*/
+}
+
+.modal-container::-webkit-scrollbar {
+    display: none; /*oculta la barra de scroll del contenedor del modal*/
+}
+
+.modal-close {
+    float: right; /*el boton de cerrar se posiciona a la derecha*/
+    cursor: pointer; /*cambia el cursor al pasar sobre el boton*/
+}
+
+.modal-title {
+    font-size:  24px;   /*tamaño de la fuente del titulo del modal*/
+    font-weight: bold;  /*peso de la fuente del titulo del modal*/
+    margin-bottom: 20px; /*margen inferior del titulo del modal*/
+    text-align: center; /*texto centrado*/
+}
+
+/*modal-body*/
+.modal-body {
+    margin-bottom:20px; /*margen inferior del cuerpo del modal*/
+    text-align: center; /*texto centrado*/
+}
+
+.products {
+    display: flex; /*los elementos dentro del contenedor se acomodan en un flexbox*/
+    justify-content: space-around; /*espacio entre los elementos*/
+    align-items: center; /*los elementos se alinean al centro*/
+    margin-bottom: 20px; /*margen inferior de los productos*/
+}
+
+.products-img {
+    height: 80px; /*altura de las imagenes*/
+    margin-right:20px; /*margen derecho de las imagenes*/
+    width: 80px;
+}
+
+.products-info {
+    flex: 1; /*el contenedor de la informacion del producto ocupa todo el espacio disponible*/
+    text-align: left; /*texto alineado a la izquierda*/
+}
+
+.products-info h4 {
+    margin-top:35px; /*margen superior del titulo del producto*/;
+}
+
+.quantity {
+    display: flex; /*los elementos dentro del contenedor se acomodan en un flexbox*/
+    align-items: center; /*los elementos se alinean al centro*/
+    justify-content: center; /*los elementos se alinean al centro*/
+    margin-top:  10px; /*margen superior del contenedor de la cantidad*/
+    margin-right: 4em; /*margen derecho del contenedor de la cantidad*/
+}
+
+.quantity-btn-decrese,
+.quantity-btn-increse {
+    color: #333333;
+    cursor: pointer; /*cambia el cursor al pasar sobre el boton*/
+    font-size: 16px; /*tamaño de la fuente del boton*/
+    width: 28px;
+    font-weight: bold; /*peso de la fuente del boton*/
+}
+
+.quantity-input {
+    color: #333333;
+    font-size: 16px;
+    padding: 10px 10px; /*relleno del input*/
+    text-align: center; /*texto centrado*/
+    width: 50px; /*ancho del input*/
+    font-weight: bold; /*peso de la fuente del input*/
+}
+
+@media only screen and (max-width: 500px) {
+    .products-img {
+        display: none; /*oculta las imagenes en pantallas menores a 500px*/
+    }
+    .modal-body {
+        margin-left: 5px; /*margen izquierdo del cuerpo del modal*/
+        margin-right: 5px; /*margen derecho del cuerpo del modal*/
+    }
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold; /*peso de la fuente del precio*/
+    margin-top: 20px;   /*margen superior del precio*/
+}
+
+.delete-products {
+    margin-top: 20px;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+.total-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
