@@ -87,3 +87,4 @@ def mostrar_imagen_inicial(screen, imagen_path, duracion): # Muestra una imagen 
     for explosion in explosiones:
         explosion.dibujar(screen) 
 
+# CAMBIOS PENDIENTES
