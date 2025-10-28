@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>LA LEYENDA DE AANG: AVATAR</title>
+        
+        <link rel="stylesheet" href="./css/styles.css">
+        <!-- Fuente -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+     </head>
+    <body>
+        <h1>AVATAR 🔥💧🌱🌪️</h1> <!--Esto es estatico, NO cambia, el h1 se utiliza una vez-->
+        <section id="inicio">
+            <button id="boton-reglas">Reglas del Juego</button>
+        </section>
+
+        <section id="reglas-del-juego">
+            <h4>REGLAS DEL JUEGO</h4>
+            <ol>
+                <li><strong>Selección de Personajes:</strong>
+                    <ul>
+                        <li>El jugador elige uno de los seis personajes: Zuko, Katara, Aang, Toph, Suki, o Iroh.</li>
+       
+                        <li>El enemigo es asignado aleatoriamente de entre estos personajes.</li>
+       
+                    </ul>
+                </li>
+                <li><strong>Ataques:</strong>
+                    <ul>
+                        <li>El jugador elige entre tres ataques: Puño, Patada, y Barrida.</li>
+       
+                        <li>El enemigo elige su ataque aleatoriamente.</li>
+       
+                    </ul>
+                </li>
+                <li><strong>Reglas del Combate:</strong>
+                    <ul>
+       
+                        <li><strong>Empate:</strong> Si ambos eligen el mismo ataque.</li>
+       
+                        <li><strong>Victoria del Jugador:</strong>
+                            <ul>
+       
+                                <li>Puño ✊ vence a Barrida 👣.</li>
+       
+                                <li>Patada 🦶 vence a Puño ✊.</li>
+       
+                                <li>Barrida 👣 vence a Patada 🦶.</li>
+       
+                            </ul>
+                        </li>
+                        <li><strong>Derrota del Jugador:</strong> Cualquier otra combinación.</li>
+                    </ul>
+                </li>
+                <li><strong>Vidas:</strong>
+                    <ul>
+                        <li>Ambos comienzan con 3 vidas.</li>
+       
+                        <li>Perder un combate disminuye una vida.</li>
+       
+                    </ul>
+                </li>
+                <li><strong>Fin del Juego:</strong>
+                    <ul>
+       
+                        <li><strong>Victoria del Jugador:</strong> Enemigo pierde todas sus vidas.</li>
+       
+                        <li><strong>Derrota del Jugador:</strong> Jugador pierde todas sus vidas.</li>
+       
+                        <li>Se deshabilitan los botones de ataque y se muestra un botón para reiniciar el juego.</li>
+                    </ul>
+                </li>
+                <li><strong>Reinicio del Juego:</strong>
+                    <ul>
+       
+                        <li>El jugador puede reiniciar el juego, recargando la página.</li>
+       
+                    </ul>
+                </li>
+            </ol>
+            <button id="boton-jugar">Jugar</button>
+        </section>
+       
+        <section id="seleccionar-personaje">
+            <h2>Elige tu Personaje</h2>
+            <div class="personajes-grid">
+                <div class="personaje-opcion">
+                    <svg class="personaje-imagen" width="80" height="80" viewBox="0 0 80 80">
+                        <!-- Zuko estilo anime -->
+                        <rect width="80" height="80" fill="#8B0000" rx="10"/>
+                        <!-- Cara anime -->
+                        <ellipse cx="40" cy="38" rx="14" ry="16" fill="#FFDBAC"/>
+                        <!-- Cabello negro estilo anime -->
+                        <path d="M26 28 Q40 18 54 28 Q52 35 48 38 Q44 32 40 34 Q36 32 32 38 Q28 35 26 28" fill="#000"/>
+                        <!-- Mechón rebelde -->
+                        <path d="M44 22 Q48 18 52 22" stroke="#000" stroke-width="2" fill="none"/>
+                        <!-- Ojos anime grandes -->
+                        <ellipse cx="34" cy="35" rx="3" ry="4" fill="#FFD700"/>
+                        <ellipse cx="46" cy="35" rx="3" ry="4" fill="#FFD700"/>
+                        <!-- Pupilas -->
+                        <circle cx="34" cy="35" r="2" fill="#000"/>
+                        <circle cx="46" cy="35" r="2" fill="#000"/>
+                        <!-- Brillos en los ojos -->
+                        <circle cx="35" cy="33" r="0.8" fill="#FFF"/>
+                        <circle cx="47" cy="33" r="0.8" fill="#FFF"/>
+                        <!-- Cicatriz característica -->
+                        <path d="M30 32 Q33 36 36 40" stroke="#8B0000" stroke-width="2" fill="none"/>
+                        <!-- Cejas fruncidas -->
+                        <path d="M31 30 L37 28" stroke="#000" stroke-width="1.5"/>
+                        <path d="M43 28 L49 30" stroke="#000" stroke-width="1.5"/>
+                        <!-- Boca seria -->
+                        <path d="M36 45 Q40 43 44 45" stroke="#000" stroke-width="1.5" fill="none"/>
+                        <!-- Llama -->
+                        <text x="40" y="68" font-family="Arial" font-size="10" fill="#FF4500" text-anchor="middle">🔥</text>
+                    </svg>
+                    <label for="zuko">Zuko</label>
+                    <input type="radio" name="personaje" id="zuko"/>
+                </div>
+
+                <div class="personaje-opcion">
+                    <svg class="personaje-imagen" width="80" height="80" viewBox="0 0 80 80">
+                        <!-- Katara estilo anime -->
+                        <rect width="80" height="80" fill="#1E90FF" rx="10"/>
+                        <!-- Cara anime -->
+                        <ellipse cx="40" cy="38" rx="14" ry="16" fill="#FFDBAC"/>
+                        <!-- Cabello castaño estilo anime -->
+                        <path d="M26 28 Q40 20 54 28 Q52 40 48 45 Q40 38 32 45 Q28 40 26 28" fill="#8B4513"/>
+                        <!-- Mechones laterales característicos -->
+                        <path d="M24 32 Q26 38 28 44" stroke="#8B4513" stroke-width="4" fill="none"/>
+                        <path d="M56 32 Q54 38 52 44" stroke="#8B4513" stroke-width="4" fill="none"/>
+                        <!-- Ojos anime grandes azules -->
+                        <ellipse cx="34" cy="35" rx="3.5" ry="5" fill="#87CEEB"/>
+                        <ellipse cx="46" cy="35" rx="3.5" ry="5" fill="#87CEEB"/>
+                        <!-- Pupilas -->
+                        <circle cx="34" cy="36" r="2.5" fill="#0066CC"/>
+                        <circle cx="46" cy="36" r="2.5" fill="#0066CC"/>
+                        <!-- Brillos en los ojos -->
+                        <circle cx="35" cy="33" r="1" fill="#FFF"/>
+                        <circle cx="47" cy="33" r="1" fill="#FFF"/>
+                        <!-- Pestañas -->
+                        <path d="M31 32 L30 30" stroke="#000" stroke-width="1"/>
+                        <path d="M37 32 L36 30" stroke="#000" stroke-width="1"/>
+                        <path d="M43 32 L44 30" stroke="#000" stroke-width="1"/>
+                        <path d="M49 32 L50 30" stroke="#000" stroke-width="1"/>
+                        <!-- Collar azul -->
+                        <ellipse cx="40" cy="52" rx="8" ry="2" fill="#00BFFF"/>
+                        <!-- Sonrisa amable -->
+                        <path d="M35 44 Q40 47 45 44" stroke="#000" stroke-width="1.5" fill="none"/>
+                        <!-- Gota de agua -->
+                        <text x="40" y="68" font-family="Arial" font-size="10" fill="#00BFFF" text-anchor="middle">💧</text>
+                    </svg>
+                    <label for="katara">Katara</label>
+                    <input type="radio" name="personaje" id="katara"/>
+                </div>
+
+                <div class="personaje-opcion">
+                    <svg class="personaje-imagen" width="80" height="80" viewBox="0 0 80 80">
+                        <!-- Aang estilo anime -->
+                        <rect width="80" height="80" fill="#FF8C00" rx="10"/>
+                        <!-- Cara anime -->
+                        <ellipse cx="40" cy="38" rx="14" ry="16" fill="#FFDBAC"/>
+                        <!-- Tatuaje de flecha azul más detallado -->
+                        <path d="M40 22 L36 30 L40 32 L44 30 Z" fill="#4169E1"/>
+                        <path d="M40 32 L40 40" stroke="#4169E1" stroke-width="3"/>
+                        <!-- Ojos anime grandes grises -->
+                        <ellipse cx="34" cy="36" rx="4" ry="5.5" fill="#E6E6FA"/>
+                        <ellipse cx="46" cy="36" rx="4" ry="5.5" fill="#E6E6FA"/>
+                        <!-- Pupilas grises -->
+                        <circle cx="34" cy="37" r="3" fill="#708090"/>
+                        <circle cx="46" cy="37" r="3" fill="#708090"/>
+                        <!-- Brillos en los ojos -->
+                        <circle cx="35" cy="35" r="1.2" fill="#FFF"/>
+                        <circle cx="47" cy="35" r="1.2" fill="#FFF"/>
+                        <!-- Cejas delgadas -->
+                        <path d="M30 32 Q34 30 38 32" stroke="#8B4513" stroke-width="1" fill="none"/>
+                        <path d="M42 32 Q46 30 50 32" stroke="#8B4513" stroke-width="1" fill="none"/>
+                        <!-- Gran sonrisa anime -->
+                        <path d="M32 46 Q40 52 48 46" stroke="#000" stroke-width="2" fill="none"/>
+                        <!-- Mejillas sonrojadas -->
+                        <circle cx="28" cy="42" r="2" fill="#FFB6C1" opacity="0.6"/>
+                        <circle cx="52" cy="42" r="2" fill="#FFB6C1" opacity="0.6"/>
+                        <!-- Símbolo del aire -->
+                        <text x="40" y="68" font-family="Arial" font-size="10" fill="#87CEEB" text-anchor="middle">🌪️</text>
+                    </svg>
+                    <label for="aang">Aang</label>
+                    <input type="radio" name="personaje" id="aang"/>
+                </div>
+
+                <div class="personaje-opcion">
+                    <svg class="personaje-imagen" width="80" height="80" viewBox="0 0 80 80">
+                        <!-- Toph estilo anime -->
+                        <rect width="80" height="80" fill="#228B22" rx="10"/>
+                        <!-- Cara anime -->
+                        <ellipse cx="40" cy="38" rx="14" ry="16" fill="#FFDBAC"/>
+                        <!-- Cabello negro desordenado estilo anime -->
+                        <path d="M26 28 Q40 18 54 28 Q52 36 48 40 Q44 34 40 36 Q36 34 32 40 Q28 36 26 28" fill="#000"/>
+                        <!-- Mechones rebeldes -->
+                        <path d="M30 24 Q28 20 30 18" stroke="#000" stroke-width="2" fill="none"/>
+                        <path d="M50 24 Q52 20 50 18" stroke="#000" stroke-width="2" fill="none"/>
+                        <!-- Bandana verde más detallada -->
+                        <rect x="28" y="24" width="24" height="5" fill="#32CD32" rx="2"/>
+                        <rect x="30" y="26" width="20" height="2" fill="#228B22" rx="1"/>
+                        <!-- Ojos anime ciega (blancos pero expresivos) -->
+                        <ellipse cx="34" cy="36" rx="3" ry="4" fill="#F0F8FF"/>
+                        <ellipse cx="46" cy="36" rx="3" ry="4" fill="#F0F8FF"/>
+                        <!-- Pupilas muy claras -->
+                        <circle cx="34" cy="36" r="1.5" fill="#E6E6FA"/>
+                        <circle cx="46" cy="36" r="1.5" fill="#E6E6FA"/>
+                        <!-- Cejas gruesas y expresivas -->
+                        <rect x="30" y="32" width="8" height="1.5" fill="#000" rx="0.5"/>
+                        <rect x="42" y="32" width="8" height="1.5" fill="#000" rx="0.5"/>
+                        <!-- Expresión seria/determinada -->
+                        <path d="M35 45 L45 45" stroke="#000" stroke-width="2"/>
+                        <!-- Roca -->
+                        <text x="40" y="68" font-family="Arial" font-size="10" fill="#8B4513" text-anchor="middle">🗿</text>
+                    </svg>
+                    <label for="toph">Toph</label>
+                    <input type="radio" name="personaje" id="toph"/>
+                </div>
+
+                <div class="personaje-opcion">
+                    <svg class="personaje-imagen" width="80" height="80" viewBox="0 0 80 80">
+                        <!-- Suki estilo anime -->
+                        <rect width="80" height="80" fill="#228B22" rx="10"/>
+                        <!-- Cara anime -->
+                        <ellipse cx="40" cy="38" rx="14" ry="16" fill="#FFDBAC"/>
+                        <!-- Ojos anime grandes y determinados -->
+                        <ellipse cx="34" cy="36" rx="3.5" ry="4.5" fill="#87CEEB"/>
+                        <ellipse cx="46" cy="36" rx="3.5" ry="4.5" fill="#87CEEB"/>
+                        <!-- Pupilas -->
+                        <circle cx="34" cy="37" r="2.5" fill="#000"/>
+                        <circle cx="46" cy="37" r="2.5" fill="#000"/>
+                        <!-- Brillos en los ojos -->
+                        <circle cx="35" cy="35" r="1" fill="#FFF"/>
+                        <circle cx="47" cy="35" r="1" fill="#FFF"/>
+                        <!-- Sonrisa determinada -->
+                        <path d="M36 38 Q40 40 44 38" stroke="#000" stroke-width="1" fill="none"/>
+                        <!-- Abanico -->
+                        <text x="40" y="65" font-family="Arial" font-size="12" fill="#FFD700" text-anchor="middle">�</text>
+                    </svg>
+                    <label for="suki">Suki</label>
+                    <input type="radio" name="personaje" id="suki"/>
+                </div>
+
+                <div class="personaje-opcion">
+                    <svg class="personaje-imagen" width="80" height="80" viewBox="0 0 80 80">
+                        <!-- Azula - Cabello negro largo y llamas azules -->
+                        <rect width="80" height="80" fill="#8B008B" rx="10"/>
+                        <!-- Cara -->
+                        <circle cx="40" cy="35" r="12" fill="#FFDBAC"/>
+                        <!-- Cabello negro largo -->
+                        <path d="M25 25 Q40 18 55 25 Q53 40 50 45 Q40 40 30 45 Q27 40 25 25" fill="#000"/>
+                        <!-- Ojos dorados/amarillos -->
+                        <circle cx="36" cy="32" r="1.5" fill="#DAA520"/>
+                        <circle cx="44" cy="32" r="1.5" fill="#DAA520"/>
+                        <!-- Sonrisa malévola -->
+                        <path d="M35 38 Q40 40 45 38" stroke="#000" stroke-width="1" fill="none"/>
+                        <!-- Llama azul -->
+                        <text x="40" y="65" font-family="Arial" font-size="12" fill="#0080FF" text-anchor="middle">�</text>
+                    </svg>
+                    <label for="iroh">Iroh</label>
+                    <input type="radio" name="personaje" id="iroh"/>
+                </div>
+            </div>
+
+            <button id="boton-personaje">Seleccionar</button> <!-- El botón para seleccionar el personaje-->
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h2>Elige tu ataque</h2> <!--Se puede utilizar varias veces-->
+            <p>Tu personaje <span id="personaje-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p> <!--Pero esto debe ser dinamico, necesitamos que cambie-->
+            <p>El personaje <span id="personaje-enemigo"></span> del enemigo tienen <span id="vidas-enemigo">3</span> vidas</p> <!--Con la etiqueta spam vamos a modificar el 3 con JS-->
+            <p>
+                <button id="boton-punio" data-ataque="Punio">Punio ✊</button>
+                <button id="boton-patada" data-ataque="Patada">Patada 🦶</button>
+                <button id="boton-barrida" data-ataque="Barrida">Barrida 👣</button>
+            </p>
+        </section>
+
+        <section id="mensajes"> <!--Será un párrafo dinamico-->
+        </section>
+
+        <section id="reiniciar">
+            <button id="boton-reiniciar">Reiniciar</button>
+        </section>
+        <script src="./js/avatar.js"></script>
+    </body>
+    
+</html>
