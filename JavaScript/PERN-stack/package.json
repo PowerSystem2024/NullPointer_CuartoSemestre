@@ -6,13 +6,13 @@
   "scripts": {
     "dev": "nodemon .",
     "start": "node ."
-    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "express": "^4.21.2",
