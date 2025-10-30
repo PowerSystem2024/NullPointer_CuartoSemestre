@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-export const createAccesTooken = (payload) => {
+export const createAccesTooken = (paylod) => {
     return new Promise((resolve, reject) => {
         jwt.sign(paylod, "xyz123", { expiresIn:"1d"},
             (err, token) => {
