@@ -1,4 +1,5 @@
-export { default as Button } from './Button';
-export { default as Input } from './input';
-export { default as Card } from './Card';
-
+export { Button } from './Button.jsx';
+export { Card } from './Card.jsx';
+export { Input } from './Input.jsx';
+export { Label } from './Label.jsx';
+export { Container } from './Container.jsx';
