@@ -1,11 +1,11 @@
-import os # para que se conecte con el sistema operativo
+import os
 
-# Dimension de la pantalla el alto y el ancho de la pantalla
-SCREEN_WIDTH= 800
-SCREEN_HEIGHT= 600
+# Dimensiones de la pantalla
+SCREEN_WIDTH = 1700
+SCREEN_HEIGHT = 1000
 
-# Colores que se van a utilizar en el juego
-COLOR_LASER = (0,0,255) # color azul
+# Colores
+COLOR_LASER = (0, 0, 255)  # Azul
 
-# Ruta a la carpeta assets
-ASSETS_PATH = os.path.join(os.path.dirname(__file__), 'assets')
+# Ruta a los assets
+ASSETS_PATH = os.path.join(os.path.dirname(__file__), 'assets_1')
