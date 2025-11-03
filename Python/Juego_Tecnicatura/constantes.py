@@ -1,14 +1,11 @@
-# constantes.py
-# dimensiones de la pantalla
+import os
 
+# Dimensiones de la pantalla
 SCREEN_WIDTH = 1700
-SCREEN_HEIGHT = 100
+SCREEN_HEIGHT = 1000
 
-# ruta de los assets
-ASSETS_PATH = 'C:/Users/Betsabé Gutierrez/TEC4/NullPointer_CuartoSemestre/Python/Juego_Tecnicatura/assets'
+# Colores
+COLOR_LASER = (0, 0, 255)  # Azul
 
-# Rutas de los archivos
-IMPERIAL_MARCH_PATH = f'{ASSETS_PATH}/sounds/ Imperial Mach - Kenobi.mp3'
-START_IMAGE_PATH = f'{ASSETS_PATH}/images/inicio/star.png'
-ESTRELLA_PATH = f'{ASSETS_PATH}/images/inicio/estrella'
-FONDO1_PATH = f'{ASSETS_PATH}/images/fondo1.jpg'
+# Ruta a los assets
+ASSETS_PATH = os.path.join(os.path.dirname(__file__), 'assets_1')
