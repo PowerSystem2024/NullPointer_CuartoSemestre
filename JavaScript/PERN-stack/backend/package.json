@@ -4,8 +4,8 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon .",
-    "start": "nodemon .",
+    "dev": "nodemon src/index.js",
+    "start": "nodemon src/index.js",
     "lint": "eslint ."
   },
   "keywords": [],

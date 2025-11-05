@@ -1,10 +1,10 @@
 import pg from "pg";
 
 export const pool = new pg.Pool({
-    port: 5432,
+    port: 5173,
     host: "localhost",
-    user: "postgres",
-    password: "1234",
+    user: "postgresql",
+    password: "admin",
     database: "PERN",
 });
 
